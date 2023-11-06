@@ -106,5 +106,14 @@ age = 15
 breed = 'German Shepard'
 is_injury_free = True
 
-sentence = name + ' is ' + str(age) + ' years old, he is ' + breed + ' and he is injury free: ' + str(is_injury_free)
-print(sentence)
+# sentence = name + ' is ' + str(age) + ' years old, he is ' + breed + ' and he is injury free: ' + str(is_injury_free)
+# print(sentence)
+
+
+# sentence = '{1} is {0} years old, he is {2} and he is injury free: {3}'
+# sentence = '{} is {} years old, he is {} and he is injury free: {}'
+
+# print(sentence.format(age, name, breed, is_injury_free))
+# print('%s is %s years old, he is %s and he is injury free: %s' %(name, age, breed, is_injury_free))
+
+print(f'{name} is {age} years old, he is {breed} and he is injury free: {is_injury_free}')

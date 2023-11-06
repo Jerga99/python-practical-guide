@@ -60,27 +60,51 @@
 # print(message)
 
 
-x = 10
+# x = 10
 
-sum_1 = x + 100
-print(sum_1)
+# sum_1 = x + 100
+# print(sum_1)
 
-# Will not work
+# # Will not work
+# # print(y)
+
+# x = 30
+# y = 100
 # print(y)
 
-x = 30
-y = 100
-print(y)
-
-sum = x + 20
-print(sum)
+# sum = x + 20
+# print(sum)
 
 
-a, b, c = 20, 30, 'Filip'
+# a, b, c = 20, 30, 'Filip'
 
-print(a + b)
-print('Hi ' + c)
+# print(a + b)
+# print('Hi ' + c)
 
-d = e = f = 'Hi There!'
+# d = e = f = 'Hi There!'
 
-print(d + e + f)
+# print(d + e + f)
+
+
+# Create a variable num1 and num2
+# Assign custom numeric values to it (value range between 1-10)
+# print out value of num1 to power of num2
+
+num_1 = 5
+num_2 = 3
+
+result = num_1 ** num_2
+print(result)
+
+# Create variables to hold the information about a dog (name, age, breed, is_injury_free)
+# Figure out what data types you want to assign to variables, look at the names
+# print out the information about the dog as a one sentence.
+# 'Alex is 20 years old, he is german shepard and he is injury free: False'
+
+name = 'Rex'
+age = 15
+breed = 'German Shepard'
+is_injury_free = True
+
+sentence = name + ' is ' + str(age) + ' years old, he is ' + breed + ' and he is injury free: ' + str(is_injury_free)
+print(sentence)

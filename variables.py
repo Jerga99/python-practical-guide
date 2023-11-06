@@ -45,17 +45,42 @@
 # print(bool_result)
 
 
-name = 'Filip'
-age = 30
-is_freelancer = True
+# name = 'Filip'
+# age = 30
+# is_freelancer = True
 
 
-name_age = name + str(age) + str(is_freelancer)
-print(name_age)
+# name_age = name + str(age) + str(is_freelancer)
+# print(name_age)
 
-# 'Filip is 30 years old, and he is a freelancer: True'
+# # 'Filip is 30 years old, and he is a freelancer: True'
 
-message = name + ' is ' + str(age) + ' years old, and he is a freelancer: ' + str(is_freelancer)
+# message = name + ' is ' + str(age) + ' years old, and he is a freelancer: ' + str(is_freelancer)
 
-print(message)
+# print(message)
 
+
+x = 10
+
+sum_1 = x + 100
+print(sum_1)
+
+# Will not work
+# print(y)
+
+x = 30
+y = 100
+print(y)
+
+sum = x + 20
+print(sum)
+
+
+a, b, c = 20, 30, 'Filip'
+
+print(a + b)
+print('Hi ' + c)
+
+d = e = f = 'Hi There!'
+
+print(d + e + f)

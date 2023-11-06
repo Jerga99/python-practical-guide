@@ -17,33 +17,45 @@
 # print(res_4)
 # print(res_5)
 
-# int
-10
-15
--100
-0
+# # int
+# 10
+# 15
+# -100
+# 0
 
-# float
-3.14
-2.85
-1.2138219739
+# # float
+# 3.14
+# 2.85
+# 1.2138219739
 
-# string
-'Filip Jerga'
-'Hello World'
+# # string
+# 'Filip Jerga'
+# 'Hello World'
 
-# bool
-True
-False
+# # bool
+# True
+# False
 
-result = '10' + '10' # 1010
-result_1 = 'Filip' + ' ' + 'Jerga' # 'Filip Jerga'
-print(result)
-print(result_1)
+# result = '10' + '10' # 1010
+# result_1 = 'Filip' + ' ' + 'Jerga' # 'Filip Jerga'
+# print(result)
+# print(result_1)
 
-bool_result = True + False
-print(bool_result)
+# bool_result = True + False
+# print(bool_result)
 
 
+name = 'Filip'
+age = 30
+is_freelancer = True
 
+
+name_age = name + str(age) + str(is_freelancer)
+print(name_age)
+
+# 'Filip is 30 years old, and he is a freelancer: True'
+
+message = name + ' is ' + str(age) + ' years old, and he is a freelancer: ' + str(is_freelancer)
+
+print(message)
 

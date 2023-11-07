@@ -21,16 +21,22 @@ num_3 = 10
 
 result = num_1 > num_2
 
+if num_1 > num_2: print('How are you?')
+    
+print('Hi There!')
+print('Hello There')
+
+
 # if result:
 #     print('Hello World!')
 # else:
 #     print('Goodbye!')
 
-if num_1 > num_2:
-    print('Do one thing')
-elif num_2 == num_3:
-    print('Do other thing')
-else:
-    print('Do last thing')
+# if num_1 > num_2:
+#     print('Do one thing')
+# elif num_2 == num_3:
+#     print('Do other thing')
+# else:
+#     print('Do last thing')
 
 

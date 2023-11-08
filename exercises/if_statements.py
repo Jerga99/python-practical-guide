@@ -31,12 +31,12 @@ result_8 = f_name[0] == 'F' and l_name[1] == 'o'
 result_9 = len(f_name) + len(l_name) < (num_1 - num_2) * num_3
 
 
-print(f'result_1: {result_1}')
-print(f'result_2: {result_2}')
-print(f'result_3: {result_3}')
-print(f'result_4: {result_4}')
-print(f'result_5: {result_5}')
-print(f'result_6: {result_6}')
-print(f'result_7: {result_7}')
-print(f'result_8: {result_8}')
-print(f'result_9: {result_9}')
+print(f'result_1: {not result_1}')
+print(f'result_2: {not result_2}')
+print(f'result_3: {not result_3}')
+print(f'result_4: {not result_4}')
+print(f'result_5: {not result_5}')
+print(f'result_6: {not result_6}')
+print(f'result_7: {not result_7}')
+print(f'result_8: {not result_8}')
+print(f'result_9: {not result_9}')

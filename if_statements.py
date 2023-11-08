@@ -67,22 +67,34 @@
 # else:
 #     print('Names are the same')
 
+# num_1 = 10
+# num_2 = 20
+# num_3 = 30
+
+# result_1 = (num_2 < num_1) and (num_3 < num_2) and (num_2 > num_1)
+# result_2 = ((num_2 < num_1) and (num_3 < num_2)) or (num_2 > num_1)
+# result_3 = (num_2 > num_1) and (num_3 > num_2) and (num_2 > num_1)
+# result_4 = ((num_2 > num_1) and (num_3 > num_2)) and (num_2 > num_1)
+# result_5 = ((num_2 > num_1) and (num_3 > num_2)) and (num_2 < num_1)
+
+# print(result_1)
+# print(result_2)
+# print(result_3)
+# print(result_4)
+# print(result_5)
+
 num_1 = 10
 num_2 = 20
-num_3 = 30
 
-result_1 = (num_2 < num_1) and (num_3 < num_2) and (num_2 > num_1)
-result_2 = ((num_2 < num_1) and (num_3 < num_2)) or (num_2 > num_1)
-result_3 = (num_2 > num_1) and (num_3 > num_2) and (num_2 > num_1)
-result_4 = ((num_2 > num_1) and (num_3 > num_2)) and (num_2 > num_1)
-result_5 = ((num_2 > num_1) and (num_3 > num_2)) and (num_2 < num_1)
+if not num_2 > num_1:
+    print('Num 2 is Larger!')
 
-print(result_1)
-print(result_2)
-print(result_3)
-print(result_4)
-print(result_5)
+display_results = False
 
+if not display_results:
+    print('Something')
 
+if not 'Filip' == 'John':
+    print('Names are not equal')
 
 

@@ -83,18 +83,42 @@
 # print(result_4)
 # print(result_5)
 
-num_1 = 10
-num_2 = 20
+# num_1 = 10
+# num_2 = 20
 
-if not num_2 > num_1:
-    print('Num 2 is Larger!')
+# if not num_2 > num_1:
+#     print('Num 2 is Larger!')
 
-display_results = False
+# display_results = False
 
-if not display_results:
-    print('Something')
+# if not display_results:
+#     print('Something')
 
-if not 'Filip' == 'John':
-    print('Names are not equal')
+# if not 'Filip' == 'John':
+#     print('Names are not equal')
+
+
+# user_name = input('Enter username: ')
+# print(f'Username is {user_name}')
+
+
+# num_1_s = input('Enter first number: ')
+# num_2_s = input('Enter second number: ')
+
+# num_1 = int(num_1_s)
+# num_2 = int(num_2_s)
+
+# # sum = num_1 + num_2
+
+# print(f'Sum is: {num_1 + num_2}')
+
+
+# num_1 = int(input('Enter first number: '))
+# num_2 = int(input('Enter second number: '))
+
+# # sum = num_1 + num_2
+
+# print(f'Sum is: {num_1 + num_2}')
+
 
 

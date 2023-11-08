@@ -49,7 +49,7 @@ while True:
     counter += 1
 
     if counter >= 100 and counter <= 400:
-        print(f'Skipping on number {counter}')
+        print(f'Skipping on number {counter}')   
         continue
 
     if counter % 2 == 0:
@@ -61,3 +61,6 @@ while True:
         print(f'Counter reached goal {COUNTER_GOAL}. We are done')
         break
 
+
+
+    

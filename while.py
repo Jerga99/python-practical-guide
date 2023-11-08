@@ -15,10 +15,26 @@
 #     counter += 1
 
 
+# counter = 0
+
+# while True:
+#     print(f'We gonna crush - {counter}')
+#     counter += 1
+
+#     if counter == 500: break
+
+COUNTER_GOAL = 200
 counter = 0
 
 while True:
-    print(f'We gonna crush - {counter}')
-    counter += 1
 
-    if counter == 500: break
+    if counter % 2 == 0:
+        print(f'Number {counter} is even!')
+    else:
+        print(f'Number {counter} is odd!')
+   
+    if counter == COUNTER_GOAL:
+        print(f'Counter reached goal {COUNTER_GOAL}. We are done')
+        break
+    
+    counter += 1

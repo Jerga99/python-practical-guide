@@ -121,4 +121,19 @@
 # print(f'Sum is: {num_1 + num_2}')
 
 
+# user_name = 'Filip'
+# age = 20
+# pi = 3.14
+# is_valid = True
 
+
+user_name = str(15) # String 15
+# age = int('Hello World') # Error Here!
+age = int(False)
+pi = float(3)
+is_valid = bool(True)
+
+print(user_name + '50')
+print(age)
+print(pi)
+print(is_valid)

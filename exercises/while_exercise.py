@@ -21,10 +21,15 @@ while True:
     x = input('Enter first number: ')
     y = input('Enter second number: ')
 
+    if not x.replace('.', '').isnumeric() or not y.replace('.', '').isnumeric():
+        print('Please enter numeric values!')
+        continue
+
     x = float(x)
     y = float(y)
 
     operation = input('Choose Operation (+, -, *, /): ')
+    operation = operation.strip()
 
     if operation == '+':
         print(f'Result is: {x + y}')
@@ -39,6 +44,7 @@ while True:
         continue
 
     q_key = input('Press (q) to quit the application, press any other key to continue: ')
+    q_key = q_key.strip().lower()
 
     if q_key == 'q':
         print('Application has been closed!')

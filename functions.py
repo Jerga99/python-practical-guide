@@ -10,7 +10,7 @@ age_2 = 29
 # print(f'{name} is {age} years old')
 # print(f'{name_2} is {age_2} years old')
 
-def print_user_info():
+def print_user_info(name, age):
     print(f'{name} is {age} years old')
 
     a = 2 + 2
@@ -19,8 +19,13 @@ def print_user_info():
         print(f'a is {a}')
 
 
-print_user_info()
-print_user_info()
-print_user_info()
-print_user_info()
-print_user_info()
+print_user_info('Mark', 45)
+print_user_info('John', 200)
+print_user_info('Alena', 23)
+print_user_info('Jess', 25)
+
+print_user_info(name, age)
+print_user_info(name_2, age_2)
+
+
+

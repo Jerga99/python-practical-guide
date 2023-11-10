@@ -17,7 +17,7 @@
 def fibonacci(length = 2):
     if length < 0:
         print('Length must be greater than 0!')
-        return
+        return None
 
     num_1 = 0
     num_2 = 1
@@ -33,12 +33,12 @@ def fibonacci(length = 2):
 
     return sequence
 
-print(fibonacci(0))
-print(fibonacci(1))
-print(fibonacci())
-print(fibonacci(5))
-print(fibonacci(6))
-print(fibonacci(7))
-print(fibonacci(8))
-print(fibonacci(9))
-print(fibonacci(10))
+
+fib_result = fibonacci(4)
+
+print(fib_result)
+
+fib_result_2 = fibonacci(-10)
+
+if fib_result_2 is None:
+    print("Cannot continue, fibonacci was't generated")

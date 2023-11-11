@@ -102,15 +102,47 @@ name_2 = 'James'
 
 # del names[-1]
 
-import random
+# import random
 
-numbers = [1,3,2,10,9,11]
-i = 0
+# numbers = [1,3,2,10,9,11]
+# i = 0
 
-while i < len(numbers):
-    if i % 2 == 0:
-        numbers.pop(i)
-    i+=1
+# while i < len(numbers):
+#     if i % 2 == 0:
+#         numbers.pop(i)
+#     i+=1
 
-print(numbers)
+# print(numbers)
 
+
+# def interesting(items = [1,2]):
+#     print(f'Items: {items}')
+#     items.append(9)
+
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+
+
+# def interesting(items = '1 2 '):
+#     print(f'Items: {items}')
+#     items += '9 '
+#     print(items)
+
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()
+# interesting()

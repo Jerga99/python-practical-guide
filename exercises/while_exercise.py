@@ -16,17 +16,23 @@
 #   Ask user to input 'q' to quit the application 
 #   if user inputs 'q' the break the while loop and print 'Application has been closed'
 
+def is_float(text_num: str) -> bool:
+    try:
+        float(text_num)
+        return True
+    except ValueError:
+        return False
 
 while True:
-    x = input('Enter first number: ')
-    y = input('Enter second number: ')
+    x_text = input('Enter first number: ')
+    y_text = input('Enter second number: ')
 
-    if not x.replace('.', '').isnumeric() or not y.replace('.', '').isnumeric():
+    if not is_float(x_text) or not is_float(y_text):
         print('Please enter numeric values!')
         continue
 
-    x = float(x)
-    y = float(y)
+    x = float(x_text)
+    y = float(y_text)
 
     operation = input('Choose Operation (+, -, *, /): ')
     operation = operation.strip()

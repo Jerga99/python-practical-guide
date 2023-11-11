@@ -14,31 +14,28 @@
 # if user call fibonacci(5) it should generate '0 1 | 1 2 3 5 8'
 # if user call fibonacci(7) it should generate '0 1 | 1 2 3 5 8 13 21'
 
-def fibonacci(length = 2):
-    if length < 0:
-        print('Length must be greater than 0!')
-        return None
+def fibonacci(length = 2, num_1 = 0, num_2 = 1, sequence = '0 1 | '):
+    if length == 0:
+        return sequence
 
-    num_1 = 0
-    num_2 = 1
-    sequence = '0 1 | '
-    i = 0
+    result = num_1 + num_2
+    sequence += f'{result} '
+    num_1 = num_2
+    num_2 = result
+    length -= 1
 
-    while i < length:
-        result = num_1 + num_2
-        sequence += f'{result} '
-        num_1 = num_2
-        num_2 = result
-        i += 1
-
-    return sequence
+    seq_result = fibonacci(length, num_1, num_2, sequence)
+    return seq_result
 
 
+fib_result = fibonacci()
+print(fib_result)
+fib_result = fibonacci(1)
+print(fib_result)
 fib_result = fibonacci(4)
-
+print(fib_result)
+fib_result = fibonacci(7)
+print(fib_result)
+fib_result = fibonacci(10)
 print(fib_result)
 
-fib_result_2 = fibonacci(-10)
-
-if fib_result_2 is None:
-    print("Cannot continue, fibonacci was't generated")

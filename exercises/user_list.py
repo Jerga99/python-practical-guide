@@ -24,16 +24,36 @@
 all_users = ['John', 'Peter']
 
 def add_user(name: str):
-    pass
+    all_users.append(name)
 
 def remove_user(name: str):
-    pass
+    all_users.remove(name)
 
 def move_user(from_idx: int, to_idx: int):
-    pass
+    temp_name = all_users[to_idx]
+    all_users[to_idx] = all_users[from_idx]
+    all_users[from_idx] = temp_name
 
 def print_users():
-    pass
+    print(all_users)
 
 while True:
-    pass
+    option = input('a - add, r - remove, m - move, p -> print, : ')
+
+    if option == 'a':
+        name_to_add = input('Write name: ')
+        add_user(name_to_add)
+    elif option == 'r':
+        name_to_remove = input('Write name: ')
+        remove_user(name_to_remove)
+    elif option == 'm':
+        initial_pos = int(input('Select initial position: '))
+        final_pos = int(input('Select final position: '))
+        move_user(initial_pos, final_pos)
+    elif option == 'p':
+        print_users()
+
+    q_key = input('Press (q) to quit the app: ')
+
+    if q_key == 'q':
+        break

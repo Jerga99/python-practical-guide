@@ -3,7 +3,18 @@
 # [1,2,3,4,5] -> bubble_sort -> [5,4,3,2,1]
 
 def bubble_sort(items: list) -> list:
-    pass
+    for _ in items[1:]:
+        i = 0
+        while i < len(items) - 1:
+            num_1 = items[i]
+            num_2 = items[i + 1]
+
+            if num_1 < num_2:
+                items[i] = num_2
+                items[i + 1] = num_1
+
+            i+=1
+    return items
 
 
 numbers = [2, 3, 5, 10, 2, 1, 14, 15, 12, 4, 20, 8]
@@ -17,3 +28,4 @@ print(bubble_sort(numbers_2))
 print(bubble_sort(numbers_3))
 print(bubble_sort(numbers_4))
 print(bubble_sort(numbers_5))
+

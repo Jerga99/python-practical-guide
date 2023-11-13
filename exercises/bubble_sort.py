@@ -2,7 +2,7 @@
 
 # [1,2,3,4,5] -> bubble_sort -> [5,4,3,2,1]
 
-def bubble_sort(items: list, optimize = False) -> list:
+def bubble_sort(items: list, reverse = False, optimize = False) -> list:
     items_count = 0
     for _ in items[1:]:
         i = 0
@@ -11,7 +11,9 @@ def bubble_sort(items: list, optimize = False) -> list:
             num_1 = items[i]
             num_2 = items[i + 1]
 
-            if num_1 < num_2:
+            condition = num_1 < num_2 if reverse else num_1 > num_2
+
+            if condition:
                 items[i] = num_2
                 items[i + 1] = num_1
                 is_sorted = True
@@ -34,13 +36,13 @@ numbers_2_o = [47, 92, 33, 74, 86, 51, 62, 90, 19, 58, 20, 64, 55, 91, 89, 66, 6
 numbers_3 = [39, 70, 75, 56, 98, 67, 20, 23, 47, 54, 89, 60, 42, 58, 83, 22, 77, 73, 85, 45]
 numbers_3_o = [39, 70, 75, 56, 98, 67, 20, 23, 47, 54, 89, 60, 42, 58, 83, 22, 77, 73, 85, 45]
 
-print(bubble_sort(numbers))
+print(bubble_sort(numbers, reverse=True))
 print(bubble_sort(numbers_o, optimize=True))
 
-print(bubble_sort(numbers_2))
+print(bubble_sort(numbers_2, reverse=True))
 print(bubble_sort(numbers_2_o, optimize=True))
 
-print(bubble_sort(numbers_3))
+print(bubble_sort(numbers_3, reverse=True))
 print(bubble_sort(numbers_3_o, optimize=True))
 
 

@@ -42,9 +42,12 @@ names = ['Eli', 'Martin', 'John', 'Jane']
 # for i,name in enumerate(names):
 #     print(f'{name} - i: {i}')
 
-for i, name in enumerate(names):
-    print(f'{name} - i: {i}')
+# for i, name in enumerate(names):
+#     print(f'{name} - i: {i}')
 
-    for j, letter in enumerate(name):
-        print(f'{letter} - j: {j}')
+#     for j, letter in enumerate(name):
+#         print(f'{letter} - j: {j}')
+
+index = names.index('Martin')
+print(f'Index is: {index}')
     

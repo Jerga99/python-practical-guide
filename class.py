@@ -21,6 +21,12 @@ class Person:
         for note in self.notes:
             print(note)
 
+    # Magic methods, have specific names and they are called implicitely by Python interpreter
+    # in response to certain events or operations
+    # These magic methods allow us to customize the behaviour of our objects
+    def __str__(self) -> str:
+        return f'Person(name={self.name}, age: {self.age})'
+
 class Database:
     def __init__(self) -> None:
         self.persons = list[Person]()
@@ -35,23 +41,13 @@ class Database:
 
     def print_persons(self):
         for person in self.persons:
-            print(f'{person.name} - {person.age} Years')
+            print(person)
 
 
 person_1 = Person('Filip', 32)
 
 person_1.name = 'Filip UPDATED!'
-person_1.age = 100
 person_1.add_notes('Note 1', 'Note 2', 'Note 3')
-person_1.notes[1] = 'Whatever'
-
-person_3 = person_1
-
-person_3.name = 'WHATEVER'
-person_3.notes = []
-
-print(person_1)
-print(person_3)
 
 person_2 = Person('John', 24)
 

@@ -1,9 +1,9 @@
 
 
 class Person:
-    def __init__(self, name):
+    def __init__(self, name, age):
         self.name = name
-        self.age = 100
+        self.age = age
         self.notes = list[str]()
 
     def add_note(self, note: str) -> 'Person':
@@ -21,24 +21,29 @@ class Person:
         for note in self.notes:
             print(note)
 
+class Database:
+    def __init__(self) -> None:
+        self.persons = list[Person]()
 
-person_1 = Person('Filip')
-person_2 = Person('John')
+    def add_person(self, person: Person) -> 'Database':
+        self.persons.append(person)
+        return self
 
-person_1.add_note('Buy milk').add_note('Heya').add_note('Whatever')
-person_1.add_note('Learn Python')
-person_1.add_note('Go outside')
+    def add_persons(self, *persons: Person):
+        for person in persons:
+            self.persons.append(person)
 
-person_1.add_notes('Note 1', 'Note 2', 'Note 3')
+    def print_persons(self):
+        for person in self.persons:
+            print(f'{person.name} - {person.age} Years')
 
-person_1.remove_note(0)
 
-person_1.print_notes()
+person_1 = Person('Filip', 32)
+person_2 = Person('John', 24)
 
-person_2.add_note('Buy bread')
-person_2.add_note('Learn C#')
-person_2.add_note('Go inside')
+database = Database()
 
-person_2.remove_note(-1)
+database.add_person(person_1).add_person(person_2)
+database.add_persons(Person('Kate', 40), Person('Suzan', 35))
 
-person_2.print_notes()
+database.print_persons()

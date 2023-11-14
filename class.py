@@ -44,15 +44,30 @@ class Database:
             print(person)
 
 
-person_1 = Person('Filip', 32)
-
-person_1.name = 'Filip UPDATED!'
-person_1.add_notes('Note 1', 'Note 2', 'Note 3')
-
-person_2 = Person('John', 24)
-
 database = Database()
-database.add_person(person_1).add_person(person_2)
-database.add_persons(Person('Kate', 40), Person('Suzan', 35))
 
-database.print_persons()
+user_options = '''
+a - Add Person,
+r - Remove Person
+u - Update Person
+s - Switch Person
+p - Print Persons
+q - Quit App:
+'''.strip() + ' '
+
+while True:
+    operation = input(user_options)
+
+    match operation:
+        case 'a':
+            print('Add Person')
+        case 'r':
+            print('Remove Person')
+        case 'u':
+            print('Update Person')
+        case 's':
+            print('Switch Person')
+        case 'p':
+            print('Print Persons')
+        case 'q':
+            break

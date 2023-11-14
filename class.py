@@ -39,10 +39,23 @@ class Database:
 
 
 person_1 = Person('Filip', 32)
+
+person_1.name = 'Filip UPDATED!'
+person_1.age = 100
+person_1.add_notes('Note 1', 'Note 2', 'Note 3')
+person_1.notes[1] = 'Whatever'
+
+person_3 = person_1
+
+person_3.name = 'WHATEVER'
+person_3.notes = []
+
+print(person_1)
+print(person_3)
+
 person_2 = Person('John', 24)
 
 database = Database()
-
 database.add_person(person_1).add_person(person_2)
 database.add_persons(Person('Kate', 40), Person('Suzan', 35))
 

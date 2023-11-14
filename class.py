@@ -1,7 +1,7 @@
 
 
 class Person:
-    def __init__(self, name, age):
+    def __init__(self, name: str, age: int):
         self.name = name
         self.age = age
         self.notes = list[str]()
@@ -39,6 +39,17 @@ class Database:
         for person in persons:
             self.persons.append(person)
 
+    def remove_person(self, index: int):
+        self.persons.pop(index)
+
+    def update_person(self, index: int, new_name: str, new_age: int):
+        self.persons[index] = Person(new_name, new_age)
+
+    def switch_person(self, source_idx: int, target_idx: int):
+        temp = self.persons[source_idx]
+        self.persons[source_idx] = self.persons[target_idx]
+        self.persons[target_idx] = temp
+
     def print_persons(self):
         for person in self.persons:
             print(person)
@@ -55,19 +66,35 @@ p - Print Persons
 q - Quit App:
 '''.strip() + ' '
 
+def ask_person_input():
+    name_input = input('Enter person name: ')
+    age_input = int(input('Enter person age: '))
+    return (name_input, age_input)
+
+def ask_index_input(question = 'Enter person index: '):
+    i = int(input(question))
+    return i
+
 while True:
     operation = input(user_options)
 
     match operation:
         case 'a':
-            print('Add Person')
+            # person_input = ask_person_input()
+            (_name, _age) = ask_person_input()
+            database.add_person(Person(_name, _age))
         case 'r':
-            print('Remove Person')
+            _index = ask_index_input()
+            database.remove_person(_index)
         case 'u':
-            print('Update Person')
+            (_name, _age) = ask_person_input()
+            _index = ask_index_input()
+            database.update_person(_index, _name, _age)
         case 's':
-            print('Switch Person')
+            _source_index = ask_index_input()
+            _target_index = ask_index_input(question='Move to index: ')
+            database.switch_person(_source_index, _target_index)
         case 'p':
-            print('Print Persons')
+            database.print_persons()
         case 'q':
             break

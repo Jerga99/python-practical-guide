@@ -1,12 +1,19 @@
 
 PI = 3.14
 
-class Circle:
-    # class attribute
-    name = 'Nice Circle'
+class Shape:
+    def __init__(self) -> None:
+        self.name = 'Some Generic Shape'
 
+    def some_shape_method(self):
+        print('I am just shape method')
+
+    def compute_circumference(self):
+        return -1
+
+class Circle(Shape):
     def __init__(self, r: float) -> None:
-        # instance atribute
+        super().__init__()
         self.r = r
 
     def compute_circumference(self):
@@ -15,15 +22,10 @@ class Circle:
     def __str__(self) -> str:
         return f'r = {self.r}'
 
-
-Circle.name = 'Some other name'
-
 c_1 = Circle(5)
-# c_1.name = 'Some other name'
 c_2 = Circle(10)
 c_3 = Circle(2.4)
 
-print(c_1.name)
+c_2.some_shape_method()
 print(c_2.name)
-print(c_3.name)
 

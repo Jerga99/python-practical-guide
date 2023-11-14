@@ -1,25 +1,40 @@
 
 
 class Person:
-    def __init__(self, first_name, last_name):
-        self.first_name = first_name
-        self.last_name = last_name
+    def __init__(self, name):
+        self.name = name
         self.age = 100
+        self.notes = list[str]()
 
-person_1 = Person('Filip', 'Jerga')
-person_2 = Person('John', 'Doe')
-person_3 = Person('Ema', 'Walder')
+    def add_note(self, note: str):
+        self.notes.append(note)
 
-print(person_1.first_name)
-print(person_1.last_name)
-print(person_1.age)
+    def remove_note(self, index: int):
+        self.notes.pop(index)
 
-print(person_2.first_name)
-print(person_2.last_name)
-print(person_2.age)
+    def print_notes(self):
+        for note in self.notes:
+            print(note)
 
-print(person_3.first_name)
-print(person_3.last_name)
-print(person_3.age)
+
+person_1 = Person('Filip')
+person_2 = Person('John')
+
+person_1.add_note('Buy milk')
+person_1.add_note('Learn Python')
+person_1.add_note('Go outside')
+
+person_1.remove_note(0)
+
+person_1.print_notes()
+
+person_2.add_note('Buy bread')
+person_2.add_note('Learn C#')
+person_2.add_note('Go inside')
+
+person_2.remove_note(-1)
+
+person_2.print_notes()
+
 
 

@@ -15,6 +15,10 @@ class Circle(Shape):
     def __init__(self, r: float) -> None:
         super().__init__('Some Circular Shape')
         self.r = r
+        self._some_private_attribute = 42
+
+    def _super_secret_method(self) -> str:
+        return 'Super Secret Method!'
 
     def compute_circumference(self):
         return 2 * PI * self.r

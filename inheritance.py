@@ -31,13 +31,14 @@ class Square(Shape):
         print('I am just square method')
 
 
+shape = Shape()
 c_1 = Circle(5)
 c_2 = Circle(10)
 
 s_1 = Square(3)
 s_2 = Square(5.5)
 
-shapes: list[Shape] = [c_1, s_1, c_2, s_2]
+shapes: list[Shape] = [shape, c_1, s_1, c_2, s_2]
 
 # polymorphism allows objects of different tyoes to be treated as objects of a common
 # base type
